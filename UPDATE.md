@@ -14,9 +14,17 @@ Deployed copy also at: C:\Users\Thabang\mk-clothing-site\
 - PORTFOLIO_MARKETING_COPY.md — seed copy for @copywriter
 - UPDATE.md        — this marker
 
+## Logo usage
+- logo.jpg (518x211, real MK Clothing logo) is the brand asset.
+- index.html + portfolio.html headers now use <img src="logo.jpg"> (replaces the
+  text "MK" mark). Brand gold #BB952B matches the logo.
+- email_signature.html — mail-profile signature block using the logo (copy the
+  table into your email client's signature settings).
+
 ## LIVE PUBLIC URLs (GitHub Pages — verified HTTP 200)
 - Webpage:   https://thabs1234.github.io/mk-clothing/
 - Portfolio: https://thabs1234.github.io/mk-clothing/portfolio.html
+- Signature: https://thabs1234.github.io/mk-clothing/email_signature.html
 - Repo:      https://github.com/thabs1234/mk-clothing
 
 ## LOCAL URLs (open in browser, no internet needed)
