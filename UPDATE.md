@@ -36,8 +36,8 @@ Scaffold complete + portfolio page added + PUBLISHED to free GitHub Pages.
 Pending: real photos in gallery slots, real WhatsApp number, and any copy
 refinement from @copywriter.
 
-## WARNING (placeholder still in pages)
-- WhatsApp CTA = wa.me/27813124646 — VERIFIED REAL (+27 81 312 4646) as of
-  2026-08-26. No change needed; link resolves correctly.
-  To update live: edit mk_clothing/web/index.html + portfolio.html, copy to
-  C:\Users\Thabang\mk-clothing-site\, git add -A && git commit -m upd && git push.
+## WhatsApp number (RESOLVED 2026-08-26)
+- WhatsApp CTA = wa.me/27745086001 — MK Clothing's REAL business WhatsApp,
+  confirmed by user. Replaces the prior placeholder 27813124646 (which was
+  L.F. Mokoena's personal CIPC number, NOT the business line). All pages + the
+  email signature now use 27745086001.
