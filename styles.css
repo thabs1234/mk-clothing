@@ -67,3 +67,20 @@ nav a.cta:hover, .cta:hover { background:var(--mk-gold-deep); }
 .block#contact { text-align:center; }
 .block#contact p { color:var(--mk-muted); }
 footer { text-align:center; padding:30px; background:var(--mk-ink); color:#ECECEC; font-size:0.9rem; }
+
+/* Lightbox (click-to-zoom, webdevine iLightbox feel) */
+.lightbox {
+  display:none; position:fixed; inset:0; z-index:100;
+  background:rgba(20,20,22,0.92); align-items:center; justify-content:center;
+  flex-direction:column; padding:24px; cursor:zoom-out;
+}
+.lightbox.open { display:flex; }
+.lightbox img {
+  max-width:92vw; max-height:82vh; border-radius:12px;
+  box-shadow:0 20px 60px rgba(0,0,0,0.5); background:#fff;
+}
+.lightbox .lb-caption { color:#fff; margin-top:14px; font-size:1rem; opacity:0.9; }
+.lightbox .lb-close {
+  position:absolute; top:18px; right:24px; color:#fff; font-size:2rem;
+  cursor:pointer; line-height:1; user-select:none;
+}

@@ -27,12 +27,12 @@
   <section class="block">
     <h2>What We Make</h2>
     <div class="gallery-grid">
-      <article class="gallery-card"><a class="gallery-frame" href="#contact"><img src="catalogue/MK_Clothing_Hard_hat_catalogue_p10.png" alt="Fashion &amp; Alterations" /><span class="gf-caption">Custom design &amp; expert fit</span></a></article>
-      <article class="gallery-card"><a class="gallery-frame" href="#contact"><img src="catalogue/MK_Clothing_Hard_hat_catalogue_p11.png" alt="School Uniforms" /><span class="gf-caption">Durable daily wear</span></a></article>
-      <article class="gallery-card"><a class="gallery-frame" href="#contact"><img src="catalogue/MK_Clothing_Hard_hat_catalogue_p12.png" alt="Corporate Uniforms" /><span class="gf-caption">Branded workwear</span></a></article>
-      <article class="gallery-card"><a class="gallery-frame" href="#contact"><img src="catalogue/MK_Clothing_Hard_hat_catalogue_p13.png" alt="PPEs" /><span class="gf-caption">Compliant safety gear</span></a></article>
-      <article class="gallery-card"><a class="gallery-frame" href="#contact"><img src="catalogue/MK_Clothing_Hard_hat_catalogue_p14.png" alt="Printing" /><span class="gf-caption">Logos &amp; labels</span></a></article>
-      <article class="gallery-card"><a class="gallery-frame" href="#contact"><img src="catalogue/MK_Clothing_Hard_hat_catalogue_p15.png" alt="Embroidery" /><span class="gf-caption">Long-lasting finish</span></a></article>
+      <article class="gallery-card"><a class="gallery-frame" href="#contact" data-zoom="catalogue/MK_Clothing_Hard_hat_catalogue_p10.png" data-cap="Fashion &amp; Alterations"><img src="catalogue/MK_Clothing_Hard_hat_catalogue_p10.png" alt="Fashion &amp; Alterations" /><span class="gf-caption">Custom design &amp; expert fit</span></a></article>
+      <article class="gallery-card"><a class="gallery-frame" href="#contact" data-zoom="catalogue/MK_Clothing_Hard_hat_catalogue_p11.png" data-cap="School Uniforms"><img src="catalogue/MK_Clothing_Hard_hat_catalogue_p11.png" alt="School Uniforms" /><span class="gf-caption">Durable daily wear</span></a></article>
+      <article class="gallery-card"><a class="gallery-frame" href="#contact" data-zoom="catalogue/MK_Clothing_Hard_hat_catalogue_p12.png" data-cap="Corporate Uniforms"><img src="catalogue/MK_Clothing_Hard_hat_catalogue_p12.png" alt="Corporate Uniforms" /><span class="gf-caption">Branded workwear</span></a></article>
+      <article class="gallery-card"><a class="gallery-frame" href="#contact" data-zoom="catalogue/MK_Clothing_Hard_hat_catalogue_p13.png" data-cap="PPEs"><img src="catalogue/MK_Clothing_Hard_hat_catalogue_p13.png" alt="PPEs" /><span class="gf-caption">Compliant safety gear</span></a></article>
+      <article class="gallery-card"><a class="gallery-frame" href="#contact" data-zoom="catalogue/MK_Clothing_Hard_hat_catalogue_p14.png" data-cap="Printing"><img src="catalogue/MK_Clothing_Hard_hat_catalogue_p14.png" alt="Printing" /><span class="gf-caption">Logos &amp; labels</span></a></article>
+      <article class="gallery-card"><a class="gallery-frame" href="#contact" data-zoom="catalogue/MK_Clothing_Hard_hat_catalogue_p15.png" data-cap="Embroidery"><img src="catalogue/MK_Clothing_Hard_hat_catalogue_p15.png" alt="Embroidery" /><span class="gf-caption">Long-lasting finish</span></a></article>
     </div>
   </section>
 
@@ -40,9 +40,9 @@
     <h2>Gallery</h2>
     <p class="lead">More from the MK Clothing catalogue.</p>
     <div class="gallery-grid">
-      <article class="gallery-card"><a class="gallery-frame" href="#contact"><img src="catalogue/MK_Clothing_Hard_hat_catalogue_p16.png" alt="Catalogue 16" /><span class="gf-caption">View work</span></a></article>
-      <article class="gallery-card"><a class="gallery-frame" href="#contact"><img src="catalogue/MK_Clothing_Hard_hat_catalogue_p17.png" alt="Catalogue 17" /><span class="gf-caption">View work</span></a></article>
-      <article class="gallery-card"><a class="gallery-frame" href="#contact"><img src="catalogue/MK_Clothing_Hard_hat_catalogue_p18.png" alt="Catalogue 18" /><span class="gf-caption">View work</span></a></article>
+      <article class="gallery-card"><a class="gallery-frame" href="#contact" data-zoom="catalogue/MK_Clothing_Hard_hat_catalogue_p16.png" data-cap="Catalogue 16"><img src="catalogue/MK_Clothing_Hard_hat_catalogue_p16.png" alt="Catalogue 16" /><span class="gf-caption">View work</span></a></article>
+      <article class="gallery-card"><a class="gallery-frame" href="#contact" data-zoom="catalogue/MK_Clothing_Hard_hat_catalogue_p17.png" data-cap="Catalogue 17"><img src="catalogue/MK_Clothing_Hard_hat_catalogue_p17.png" alt="Catalogue 17" /><span class="gf-caption">View work</span></a></article>
+      <article class="gallery-card"><a class="gallery-frame" href="#contact" data-zoom="catalogue/MK_Clothing_Hard_hat_catalogue_p18.png" data-cap="Catalogue 18"><img src="catalogue/MK_Clothing_Hard_hat_catalogue_p18.png" alt="Catalogue 18" /><span class="gf-caption">View work</span></a></article>
     </div>
   </section>
 
@@ -55,5 +55,24 @@
   <footer>
     <p>© MK Clothing (MK FASHION CLOTHING). Portfolio.</p>
   </footer>
+
+  <div class="lightbox" id="lb"><span class="lb-close" id="lbClose">&times;</span><img id="lbImg" src="" alt=""><div class="lb-caption" id="lbCap"></div></div>
+  <script>
+    (function(){
+      var lb=document.getElementById('lb'),img=document.getElementById('lbImg'),cap=document.getElementById('lbCap');
+      document.querySelectorAll('.gallery-frame[data-zoom]').forEach(function(a){
+        a.addEventListener('click',function(e){
+          e.preventDefault();
+          img.src=a.getAttribute('data-zoom');
+          cap.textContent=a.getAttribute('data-cap')||'';
+          lb.classList.add('open');
+        });
+      });
+      function close(){ lb.classList.remove('open'); }
+      document.getElementById('lbClose').addEventListener('click',close);
+      lb.addEventListener('click',function(e){ if(e.target===lb) close(); });
+      document.addEventListener('keydown',function(e){ if(e.key==='Escape') close(); });
+    })();
+  </script>
 </body>
 </html>

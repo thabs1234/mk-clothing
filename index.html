@@ -31,12 +31,12 @@
     <h2>Business Tools</h2>
     <p class="lead">Practical tools that keep your business running — not fluff.</p>
     <div class="gallery-grid">
-      <article class="gallery-card"><a class="gallery-frame" href="#contact"><img src="catalogue/MK_Clothing_Hard_hat_catalogue_p01.png" alt="Business Tools" /><span class="gf-caption">Quotes · Orders · Clients · Docs</span></a></article>
-      <article class="gallery-card"><a class="gallery-frame" href="#marketing"><img src="catalogue/MK_Clothing_Hard_hat_catalogue_p02.png" alt="Marketing" /><span class="gf-caption">Social · WhatsApp · SEO</span></a></article>
-      <article class="gallery-card"><a class="gallery-frame" href="#contact"><img src="catalogue/MK_Clothing_Hard_hat_catalogue_p03.png" alt="Client Directory" /><span class="gf-caption">Measurements &amp; history in one place</span></a></article>
-      <article class="gallery-card"><a class="gallery-frame" href="#contact"><img src="catalogue/MK_Clothing_Hard_hat_catalogue_p04.png" alt="Order Tracker" /><span class="gf-caption">Alterations &amp; bulk orders, status live</span></a></article>
-      <article class="gallery-card"><a class="gallery-frame" href="#contact"><img src="catalogue/MK_Clothing_Hard_hat_catalogue_p05.png" alt="Document Vault" /><span class="gf-caption">CIPC, tax &amp; compliance, stored safe</span></a></article>
-      <article class="gallery-card"><a class="gallery-frame" href="#contact"><img src="catalogue/MK_Clothing_Hard_hat_catalogue_p06.png" alt="Automation" /><span class="gf-caption">Daily lead→copy→post, hands-off</span></a></article>
+      <article class="gallery-card"><a class="gallery-frame" href="#contact" data-zoom="catalogue/MK_Clothing_Hard_hat_catalogue_p01.png" data-cap="Business Tools"><img src="catalogue/MK_Clothing_Hard_hat_catalogue_p01.png" alt="Business Tools" /><span class="gf-caption">Quotes · Orders · Clients · Docs</span></a></article>
+      <article class="gallery-card"><a class="gallery-frame" href="#marketing" data-zoom="catalogue/MK_Clothing_Hard_hat_catalogue_p02.png" data-cap="Marketing"><img src="catalogue/MK_Clothing_Hard_hat_catalogue_p02.png" alt="Marketing" /><span class="gf-caption">Social · WhatsApp · SEO</span></a></article>
+      <article class="gallery-card"><a class="gallery-frame" href="#contact" data-zoom="catalogue/MK_Clothing_Hard_hat_catalogue_p03.png" data-cap="Client Directory"><img src="catalogue/MK_Clothing_Hard_hat_catalogue_p03.png" alt="Client Directory" /><span class="gf-caption">Measurements &amp; history in one place</span></a></article>
+      <article class="gallery-card"><a class="gallery-frame" href="#contact" data-zoom="catalogue/MK_Clothing_Hard_hat_catalogue_p04.png" data-cap="Order Tracker"><img src="catalogue/MK_Clothing_Hard_hat_catalogue_p04.png" alt="Order Tracker" /><span class="gf-caption">Alterations &amp; bulk orders, status live</span></a></article>
+      <article class="gallery-card"><a class="gallery-frame" href="#contact" data-zoom="catalogue/MK_Clothing_Hard_hat_catalogue_p05.png" data-cap="Document Vault"><img src="catalogue/MK_Clothing_Hard_hat_catalogue_p05.png" alt="Document Vault" /><span class="gf-caption">CIPC, tax &amp; compliance, stored safe</span></a></article>
+      <article class="gallery-card"><a class="gallery-frame" href="#contact" data-zoom="catalogue/MK_Clothing_Hard_hat_catalogue_p06.png" data-cap="Automation"><img src="catalogue/MK_Clothing_Hard_hat_catalogue_p06.png" alt="Automation" /><span class="gf-caption">Daily lead→copy→post, hands-off</span></a></article>
     </div>
   </section>
 
@@ -44,9 +44,9 @@
     <h2>Marketing</h2>
     <p class="lead">Get found, get booked, get repeat business.</p>
     <div class="gallery-grid">
-      <article class="gallery-card"><a class="gallery-frame" href="#contact"><img src="catalogue/MK_Clothing_Hard_hat_catalogue_p07.png" alt="Social Captions" /><span class="gf-caption">Ready-to-post, in your voice</span></a></article>
-      <article class="gallery-card"><a class="gallery-frame" href="https://wa.me/27813124646"><img src="catalogue/MK_Clothing_Hard_hat_catalogue_p08.png" alt="WhatsApp Outreach" /><span class="gf-caption">Stage-and-send via Business API</span></a></article>
-      <article class="gallery-card"><a class="gallery-frame" href="#contact"><img src="catalogue/MK_Clothing_Hard_hat_catalogue_p09.png" alt="SEO Listing" /><span class="gf-caption">Local search presence</span></a></article>
+      <article class="gallery-card"><a class="gallery-frame" href="#contact" data-zoom="catalogue/MK_Clothing_Hard_hat_catalogue_p07.png" data-cap="Social Captions"><img src="catalogue/MK_Clothing_Hard_hat_catalogue_p07.png" alt="Social Captions" /><span class="gf-caption">Ready-to-post, in your voice</span></a></article>
+      <article class="gallery-card"><a class="gallery-frame" href="https://wa.me/27813124646" data-zoom="catalogue/MK_Clothing_Hard_hat_catalogue_p08.png" data-cap="WhatsApp Outreach"><img src="catalogue/MK_Clothing_Hard_hat_catalogue_p08.png" alt="WhatsApp Outreach" /><span class="gf-caption">Stage-and-send via Business API</span></a></article>
+      <article class="gallery-card"><a class="gallery-frame" href="#contact" data-zoom="catalogue/MK_Clothing_Hard_hat_catalogue_p09.png" data-cap="SEO Listing"><img src="catalogue/MK_Clothing_Hard_hat_catalogue_p09.png" alt="SEO Listing" /><span class="gf-caption">Local search presence</span></a></article>
     </div>
   </section>
 
@@ -60,5 +60,24 @@
   <footer>
     <p>© MK Clothing (MK FASHION CLOTHING). All-in-one business package.</p>
   </footer>
+
+  <div class="lightbox" id="lb"><span class="lb-close" id="lbClose">&times;</span><img id="lbImg" src="" alt=""><div class="lb-caption" id="lbCap"></div></div>
+  <script>
+    (function(){
+      var lb=document.getElementById('lb'),img=document.getElementById('lbImg'),cap=document.getElementById('lbCap');
+      document.querySelectorAll('.gallery-frame[data-zoom]').forEach(function(a){
+        a.addEventListener('click',function(e){
+          e.preventDefault();
+          img.src=a.getAttribute('data-zoom');
+          cap.textContent=a.getAttribute('data-cap')||'';
+          lb.classList.add('open');
+        });
+      });
+      function close(){ lb.classList.remove('open'); }
+      document.getElementById('lbClose').addEventListener('click',close);
+      lb.addEventListener('click',function(e){ if(e.target===lb) close(); });
+      document.addEventListener('keydown',function(e){ if(e.key==='Escape') close(); });
+    })();
+  </script>
 </body>
 </html>
