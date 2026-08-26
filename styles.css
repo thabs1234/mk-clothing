@@ -1,0 +1,47 @@
+/* MK Clothing — brand palette (REAL, extracted from logo pixels via PIL) */
+:root {
+  --mk-primary:   #BB952B; /* brand gold (dominant logo color) */
+  --mk-gold-light:#C9B885; /* light gold highlight */
+  --mk-gold-deep: #907E49; /* deep gold — text/contrast on light */
+  --mk-neutral:   #FAF8F3; /* warm white, matches logo background */
+  --mk-ink:       #2B2620; /* warm near-black body text */
+}
+
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  font-family: "Segoe UI", system-ui, sans-serif;
+  background: var(--mk-neutral);
+  color: var(--mk-ink);
+  line-height: 1.55;
+}
+.site-header {
+  display: flex; justify-content: space-between; align-items: center;
+  padding: 16px 24px; background: #fff; border-bottom: 3px solid var(--mk-primary);
+}
+.brand { display: flex; align-items: center; gap: 10px; }
+.logo-mark {
+  background: var(--mk-primary); color: #fff; font-weight: 700;
+  padding: 6px 10px; border-radius: 6px; letter-spacing: 1px;
+}
+.brand-name { font-weight: 700; font-size: 1.2rem; }
+nav a { margin-left: 16px; color: var(--mk-ink); text-decoration: none; }
+nav a.cta, .cta {
+  background: var(--mk-primary); color: #fff; padding: 8px 16px;
+  border-radius: 6px; text-decoration: none; display: inline-block;
+}
+nav a.cta:hover, .cta:hover { background: var(--mk-gold-deep); }
+.hero {
+  text-align: center; padding: 64px 24px;
+  background: linear-gradient(180deg, #fff, var(--mk-neutral));
+}
+.hero h1 { font-size: 2.2rem; color: var(--mk-gold-deep); margin-bottom: 12px; }
+.hero p { max-width: 640px; margin: 0 auto 20px; }
+.block { padding: 48px 24px; max-width: 1000px; margin: 0 auto; }
+.block.alt { background: #fff; }
+.block h2 { color: var(--mk-gold-deep); border-left: 4px solid var(--mk-primary); padding-left: 12px; }
+.lead { color: #555; }
+.card-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 16px; margin-top: 20px; }
+.card { background: var(--mk-neutral); border: 1px solid var(--mk-gold-light); border-radius: 10px; padding: 18px; }
+.card h3 { color: var(--mk-primary); margin-top: 0; }
+footer { text-align: center; padding: 24px; background: var(--mk-ink); color: #eee; }
