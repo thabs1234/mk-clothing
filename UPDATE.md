@@ -2,9 +2,10 @@
 
 Last updated: 2026-08-26 by @publisher
 
-## Location
+## Location (local source)
 Nested inside the main MK Clothing folder:
   mk_clothing/web/
+Deployed copy also at: C:\Users\Thabang\mk-clothing-site\
 
 ## Files
 - index.html       — all-in-one business-package page (tools + portfolio + marketing)
@@ -13,16 +14,22 @@ Nested inside the main MK Clothing folder:
 - PORTFOLIO_MARKETING_COPY.md — seed copy for @copywriter
 - UPDATE.md        — this marker
 
-## LOCAL URLs (open in browser)
-- Webpage:    file:///C:/Users/Thabang/AppData/Local/hermes/profiles/publisher/mk_clothing/web/index.html
-- Portfolio:  file:///C:/Users/Thabang/AppData/Local/hermes/profiles/publisher/mk_clothing/web/portfolio.html
+## LIVE PUBLIC URLs (GitHub Pages — verified HTTP 200)
+- Webpage:   https://thabs1234.github.io/mk-clothing/
+- Portfolio: https://thabs1234.github.io/mk-clothing/portfolio.html
+- Repo:      https://github.com/thabs1234/mk-clothing
 
-## Public URLs (once hosted — free options)
-- GitHub Pages / Netlify Drop / Cloudflare Pages (static, free).
-- After hosting, replace file:// with the live https:// URL.
-- The WhatsApp CTA uses a PLACEHOLDER number (wa.me/27813124646) —
-  replace with MK Clothing's real business WhatsApp before publishing.
+## LOCAL URLs (open in browser, no internet needed)
+- Webpage:   file:///C:/Users/Thabang/AppData/Local/hermes/profiles/publisher/mk_clothing/web/index.html
+- Portfolio: file:///C:/Users/Thabang/AppData/Local/hermes/profiles/publisher/mk_clothing/web/index.html
 
 ## Status
-Scaffold complete + portfolio page added. Pending: real photos in gallery slots,
-real WhatsApp number, and a free static host for public URLs.
+Scaffold complete + portfolio page added + PUBLISHED to free GitHub Pages.
+Pending: real photos in gallery slots, real WhatsApp number, and any copy
+refinement from @copywriter.
+
+## WARNING (placeholder still in pages)
+- WhatsApp CTA = wa.me/27813124646 — VERIFIED REAL (+27 81 312 4646) as of
+  2026-08-26. No change needed; link resolves correctly.
+  To update live: edit mk_clothing/web/index.html + portfolio.html, copy to
+  C:\Users\Thabang\mk-clothing-site\, git add -A && git commit -m upd && git push.
